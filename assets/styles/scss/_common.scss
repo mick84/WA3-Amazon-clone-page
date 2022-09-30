@@ -1,0 +1,131 @@
+@use "abstracts" as *;
+$test-border: 2px solid red;
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+.border-hover {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  &:hover {
+    border-color: white;
+  }
+}
+body {
+  #navbar-main {
+    width: 100%;
+    flex-direction: column;
+    #navbar {
+      font-size: 14px;
+      line-height: 15px;
+      font-family: "ember-regular";
+      flex-direction: column;
+      width: 100%;
+
+      #nav-top {
+        height: 60px;
+        padding: 0.25rem 1rem;
+        justify-content: space-between;
+        position: relative;
+        background-color: $nav-top-color;
+        .nav-top-doubletext {
+          height: 40%;
+          font-size: 90%;
+          p:first-of-type {
+            color: #cccccc;
+          }
+          p:last-of-type {
+            color: white;
+            font-weight: 500;
+            font-size: 0.9rem;
+          }
+        }
+        .nav-top-item {
+          &:last-of-type {
+            display: flex;
+            height: 100%;
+          }
+          height: 95%;
+          padding: 0.5rem 0.5rem;
+        }
+        .nav-top-left {
+          #nav-logo {
+            background-image: url(/assets/images/amazon-nav-logo.png);
+            height: 40px;
+            width: 110px;
+            background-position: -7px -45px;
+          }
+          #nav-location {
+            align-items: center;
+            height: 100%;
+            #location--pin {
+              background-image: url(/assets/images/amazon-nav-logo.png);
+              scale: 0.85;
+              height: 80%;
+              width: 30px;
+              background-position-y: 573px;
+              background-position-x: -60px;
+            }
+          }
+        }
+        #searchbar {
+          position: relative;
+          border: 1px solid white;
+
+          //height: 100%;
+          #searchinput {
+            padding: 0.5rem;
+            &:active {
+              display: block;
+            }
+          }
+          #select-toggler {
+            background-color: white;
+            padding: 0.6rem;
+
+            &:hover {
+              background-color: #dadada;
+            }
+          }
+          .search-part {
+            height: 95%;
+            padding: 0.25rem 0.5rem;
+          }
+          select {
+            position: absolute;
+            transform: translateY(2rem);
+            display: none;
+            &.active {
+              display: block;
+            }
+          }
+          .btn-submit {
+            background-color: $submit-btn-color;
+            &:hover {
+              background-color: $submit-btn-hover-color;
+            }
+            padding: 0.5rem 0.75rem;
+          }
+        }
+
+        .nav-right {
+          #cart-picture {
+            height: 3rem;
+            width: 3rem;
+            background-image: url(//assets/images/amazon-nav-logo.png);
+            background-color: #cccccc;
+          }
+        }
+      }
+      #nav-middle {
+        max-height: 39px;
+        background-color: #232f3e;
+      }
+      #nav-bottom {
+        background-color: #d8f7eb;
+        padding: 2rem;
+      }
+    }
+  }
+}

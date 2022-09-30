@@ -1,0 +1,386 @@
+@charset "UTF-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "ember-regular";
+  src: url(/assets/fonts/AmazonEmber_Rg.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ember-lite";
+  src: url(/assets/fonts/AmazonEmber_Lt.ttf) format("truetype");
+}
+@font-face {
+  font-family: "ember-bold";
+  src: url(/assets/fonts/AmazonEmber_Bd.ttf) format("truetype");
+}
+@font-face {
+  font-family: "BookerlyLCD_It";
+  src: url(/assets/fonts/BookerlyLCD_It.ttf) format("truetype");
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.border-hover {
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.border-hover:hover {
+  border-color: white;
+}
+
+body #navbar-main {
+  width: 100%;
+  flex-direction: column;
+}
+body #navbar-main #navbar {
+  font-size: 14px;
+  line-height: 15px;
+  font-family: "ember-regular";
+  flex-direction: column;
+  width: 100%;
+}
+body #navbar-main #navbar #nav-top {
+  height: 60px;
+  padding: 0.25rem 1rem;
+  justify-content: space-between;
+  position: relative;
+  background-color: #131921;
+}
+body #navbar-main #navbar #nav-top .nav-top-doubletext {
+  height: 40%;
+  font-size: 90%;
+}
+body #navbar-main #navbar #nav-top .nav-top-doubletext p:first-of-type {
+  color: #cccccc;
+}
+body #navbar-main #navbar #nav-top .nav-top-doubletext p:last-of-type {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+body #navbar-main #navbar #nav-top .nav-top-item {
+  height: 95%;
+  padding: 0.5rem 0.5rem;
+}
+body #navbar-main #navbar #nav-top .nav-top-item:last-of-type {
+  display: flex;
+  height: 100%;
+}
+body #navbar-main #navbar #nav-top .nav-top-left #nav-logo {
+  background-image: url(/assets/images/amazon-nav-logo.png);
+  height: 40px;
+  width: 110px;
+  background-position: -7px -45px;
+}
+body #navbar-main #navbar #nav-top .nav-top-left #nav-location {
+  align-items: center;
+  height: 100%;
+}
+body #navbar-main #navbar #nav-top .nav-top-left #nav-location #location--pin {
+  background-image: url(/assets/images/amazon-nav-logo.png);
+  scale: 0.85;
+  height: 80%;
+  width: 30px;
+  background-position-y: 573px;
+  background-position-x: -60px;
+}
+body #navbar-main #navbar #nav-top #searchbar {
+  position: relative;
+  border: 1px solid white;
+}
+body #navbar-main #navbar #nav-top #searchbar #searchinput {
+  padding: 0.5rem;
+}
+body #navbar-main #navbar #nav-top #searchbar #searchinput:active {
+  display: block;
+}
+body #navbar-main #navbar #nav-top #searchbar #select-toggler {
+  background-color: white;
+  padding: 0.6rem;
+}
+body #navbar-main #navbar #nav-top #searchbar #select-toggler:hover {
+  background-color: #dadada;
+}
+body #navbar-main #navbar #nav-top #searchbar .search-part {
+  height: 95%;
+  padding: 0.25rem 0.5rem;
+}
+body #navbar-main #navbar #nav-top #searchbar select {
+  position: absolute;
+  transform: translateY(2rem);
+  display: none;
+}
+body #navbar-main #navbar #nav-top #searchbar select.active {
+  display: block;
+}
+body #navbar-main #navbar #nav-top #searchbar .btn-submit {
+  background-color: #ffd814;
+  padding: 0.5rem 0.75rem;
+}
+body #navbar-main #navbar #nav-top #searchbar .btn-submit:hover {
+  background-color: #f7ca00;
+}
+body #navbar-main #navbar #nav-top .nav-right #cart-picture {
+  height: 3rem;
+  width: 3rem;
+  background-image: url(//assets/images/amazon-nav-logo.png);
+  background-color: #cccccc;
+}
+body #navbar-main #navbar #nav-middle {
+  max-height: 39px;
+  background-color: #232f3e;
+}
+body #navbar-main #navbar #nav-bottom {
+  background-color: #d8f7eb;
+  padding: 2rem;
+}/*# sourceMappingURL=style.css.map */

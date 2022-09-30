@@ -5,27 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/styles/style.css" />
-    <script src="https://kit.fontawesome.com/c09194ae9d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/c09194ae9d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="/assets/scripts/app.js"></script>
     <title>Document</title>
   </head>
   <body>
     <header id="navbar-main" class="flex">
       <nav id="navbar">
-        <div id="nav-top">
-          <div class="nav-left">
-            <div id="nav-logo"></div>
-            <div id="nav-location">
+        <div id="nav-top" class="flex">
+          <div class="nav-top-left flex">
+            <div id="nav-logo" class="nav-top-item border-hover"></div>
+            <div id="nav-location" class="nav-top-item border-hover">
               <div id="location--pin"></div>
-              <div class="location-info">
-                <p class="location-text">Deliver to</p>
-                <p class="location-text">Israel</p>
+              <div class="nav-top-doubletext">
+                <p>Deliver to</p>
+                <p>Israel</p>
               </div>
             </div>
           </div>
-          <div id="nav-middle"></div>
-          <div id="nav-bottom"></div>
-          <div id="nav-ad"></div>
-        
+          <div class="nav-top-center">
+            <form action="/" id="searchbar" class="nav-top-item flex">
+              <div id="select-toggler" class="search-part">
+                <span class="selected-category"
+                  >All&nbsp;<i class="fa-solid fa-sort-down"></i
+                ></span>
+              </div>
+              <select name="select-search" id="select-search" form="searchbar">
+                <option value="All Departments">All Departments</option>
+                <option value="Cars">Cars</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Food">Food</option>
+                <option value="Programs">Programs</option>
+                <option value="Courses">Courses</option>
+              </select>
+              <input type="search" id="searchinput" class="search-part" />
+              <button
+                type="submit"
+                id="form-submit"
+                class="search-part btn-submit"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+          </div>
+          <div class="nav-top-right flex">
+            <div class="nav-top-item border-hover">
+              <div class="nav-top-doubletext">
+                <p>Hello, <span id="username">sign in</span></p>
+                <p>Account & Lists</p>
+              </div>
+            </div>
+            <div class="nav-top-item border-hover">
+              <div class="nav-top-doubletext">
+                <p>Returns</p>
+                <p>& Orders</p>
+              </div>
+            </div>
+            <div class="nav-top-item border-hover">
+              <div id="cart-picture"></div>
+              <div class="nav-top-doubletext">
+                <p><br /></p>
+                <p>Cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="nav-middle">
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+          <div class="nav-top-item border-hover"></div>
+        </div>
+        <div id="nav-bottom"></div>
+        <div id="nav-ad"></div>
       </nav>
     </header>
   </body>
