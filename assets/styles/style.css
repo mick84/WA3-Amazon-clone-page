@@ -247,6 +247,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 @font-face {
@@ -265,9 +266,27 @@ a {
   font-family: "BookerlyLCD_It";
   src: url(/assets/fonts/BookerlyLCD_It.ttf) format("truetype");
 }
+.label {
+  font-size: 1.05rem;
+  margin: 1rem 0;
+}
+
+.secondary-link {
+  color: #007185;
+}
+
+.price {
+  color: #c54204;
+  font-size: 1.1rem;
+}
+
 .flex {
   display: flex;
   align-items: center;
+}
+
+.text-bold {
+  font-weight: bold;
 }
 
 .border-hover {
@@ -278,6 +297,25 @@ a {
   border-color: white;
 }
 
+.hovered {
+  display: block;
+  z-index: 10;
+}
+
+.nav-btn-link {
+  height: 95%;
+  padding: 0.5rem 0.5rem;
+  color: white;
+}
+
+.dynamic-content::after {
+  content: " " attr(data-content) " ";
+}
+
+body {
+  font-family: "ember-regular";
+  font-size: 14px;
+}
 body #navbar-main {
   width: 100%;
   flex-direction: column;
@@ -285,7 +323,6 @@ body #navbar-main {
 body #navbar-main #navbar {
   font-size: 14px;
   line-height: 15px;
-  font-family: "ember-regular";
   flex-direction: column;
   width: 100%;
 }
@@ -308,10 +345,6 @@ body #navbar-main #navbar #nav-top .nav-top-doubletext p:last-of-type {
   font-weight: 500;
   font-size: 0.9rem;
 }
-body #navbar-main #navbar #nav-top .nav-top-item {
-  height: 95%;
-  padding: 0.5rem 0.5rem;
-}
 body #navbar-main #navbar #nav-top .nav-top-item:last-of-type {
   display: flex;
   height: 100%;
@@ -325,14 +358,12 @@ body #navbar-main #navbar #nav-top .nav-top-left #nav-logo {
 body #navbar-main #navbar #nav-top .nav-top-left #nav-location {
   align-items: center;
   height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 body #navbar-main #navbar #nav-top .nav-top-left #nav-location #location--pin {
   background-image: url(/assets/images/amazon-nav-logo.png);
-  scale: 0.85;
-  height: 80%;
-  width: 30px;
-  background-position-y: 573px;
-  background-position-x: -60px;
 }
 body #navbar-main #navbar #nav-top #searchbar {
   position: relative;
@@ -378,9 +409,99 @@ body #navbar-main #navbar #nav-top .nav-right #cart-picture {
 }
 body #navbar-main #navbar #nav-middle {
   max-height: 39px;
+  padding: 0.25rem 1rem;
   background-color: #232f3e;
 }
 body #navbar-main #navbar #nav-bottom {
   background-color: #d8f7eb;
-  padding: 2rem;
+  padding: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+body main {
+  max-width: 1450px;
+  margin: auto;
+}
+body main #way-links {
+  font-size: 0.75rem;
+  margin: 0.25rem;
+}
+body main #way-links .way-link {
+  color: gray;
+}
+body main #way-links .way-link:hover {
+  text-decoration: underline;
+}
+body main #way-links i {
+  margin: 0 0.2rem;
+  scale: 0.6;
+  color: gray;
+}
+body main #product {
+  align-items: start;
+  translate: 0 1rem;
+}
+body main #product #small-pictures-container {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  translate: -50% 2rem;
+}
+body main #product #small-pictures-container .small-picture > img.selected {
+  display: block;
+}
+body main #product #small-pictures-container .small-picture > img:not(.selected) {
+  display: none;
+}
+body main #product #big-pictures-container {
+  position: relative;
+  top: 1rem;
+}
+body main #product #big-pictures-container .big-picture.selected {
+  display: block;
+}
+body main #product #big-pictures-container .big-picture:not(.selected) {
+  display: none;
+}
+body main #product #big-pictures-container .big-picture > img {
+  max-width: 613px;
+  max-height: 700px;
+}
+body main #product #big-pictures-container .big-picture > img.selected {
+  display: block;
+}
+body main #product #big-pictures-container .big-picture > img:not(.selected) {
+  display: none;
+}
+body main #product #product-details {
+  margin: 0 1rem;
+}
+body main #product #product-details #product-main-text {
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: #565959;
+}
+body main #product #product-details #product-options #color-section #color-selector {
+  padding: 0.25rem 0;
+}
+body main #product #product-details #product-options #color-section #color-selector .imgSwatch {
+  cursor: pointer;
+  border: 1px solid rgb(172, 172, 172);
+  margin-right: 0.5rem;
+}
+body main #product #product-details #product-options #color-section #color-selector .imgSwatch.selected {
+  box-shadow: 0 0 2px 1px #e77600;
+  border-color: #e77600;
+}
+body main #product #product-details #product-options #size-section select {
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid;
+}
+body main #product #product-details #product-options #size-section select:hover {
+  background-color: #e3e6e6;
+  box-shadow: 0 0 2px 2px #92c1ff;
+}
+body main #product #product-details #product-options #size-section select:hover option {
+  background-color: #fff;
 }/*# sourceMappingURL=style.css.map */
