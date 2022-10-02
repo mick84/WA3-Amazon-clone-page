@@ -45,7 +45,6 @@ body {
     flex-direction: column;
 
     #navbar {
-      font-size: 14px;
       line-height: 15px;
 
       flex-direction: column;
@@ -251,6 +250,38 @@ body {
                   background-color: #fff;
                 }
               }
+            }
+          }
+          #additional-info {
+            .property:nth-of-type(n + 1) {
+              margin-bottom: 0.5rem;
+            }
+            #description {
+              display: none;
+            }
+          }
+        }
+      }
+      #buyer-area {
+        width: max-content;
+        .actual-price {
+          font-size: 1.5rem;
+        }
+        .buyer-area--btn {
+          width: 95%;
+          margin: 0.5rem auto;
+          padding: 0.5rem 0;
+          border-radius: 1rem;
+          &#btn-add {
+            background-color: $submit-btn-color;
+            &:hover {
+              background-color: $submit-btn-hover-color;
+            }
+          }
+          &#btn-buy {
+            background-color: $star-color;
+            &:hover {
+              background-color: $small-picture-hover-border-color;
             }
           }
         }
