@@ -42,3 +42,11 @@ colorSelector.onmouseout = function (event) {
     bigHoveredPicture?.classList.remove("hovered");
   }
 };
+document.getElementById("info-expander").onclick = function () {
+  document.getElementById("description").style.display = "block";
+  this.style.display = "none";
+};
+document.getElementById("info-collapser").onclick = function () {
+  document.getElementById("info-expander").style.display = "block";
+  document.getElementById("description").style.display = "none";
+};

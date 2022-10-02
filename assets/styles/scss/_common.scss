@@ -4,8 +4,19 @@ $test-border: 2px solid red;
   font-size: 1.05rem;
   margin: 1rem 0;
 }
+.card {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #a7a7a7;
+}
 .secondary-link {
   color: $secondary-link-color;
+  &:hover {
+    text-decoration: underline;
+    color: #d7771f;
+    cursor: pointer;
+  }
 }
 .price {
   color: $price-color;
@@ -31,6 +42,7 @@ $test-border: 2px solid red;
 }
 .nav-btn-link {
   height: 95%;
+  width: max-content;
   padding: 0.5rem 0.5rem;
   color: white;
 }
@@ -54,6 +66,7 @@ body {
         height: 60px;
         padding: 0.25rem 1rem;
         justify-content: space-between;
+        //justify-items: stretch;
         position: relative;
         background-color: $nav-top-color;
         .nav-top-doubletext {
@@ -91,46 +104,59 @@ body {
             }
           }
         }
-        #searchbar {
-          position: relative;
-          border: 1px solid white;
+        .nav-top-center {
+          width: 100%;
+          #searchbar {
+            position: relative;
+            border: 1px solid white;
+            overflow: hidden;
+            border-radius: 5px;
+            width: auto;
+            margin: 0 1rem;
+            height: 2.5rem;
 
-          //height: 100%;
-          #searchinput {
-            padding: 0.5rem;
-            &:active {
-              display: block;
+            #searchinput {
+              line-height: 1.2rem;
+              font-size: 1.2rem;
             }
-          }
-          #select-toggler {
-            background-color: white;
-            padding: 0.6rem;
-
-            &:hover {
-              background-color: #dadada;
+            #select-toggler {
+              background-color: white;
+              padding: 0.6rem;
+              min-width: 3.5rem;
+              max-width: max-content;
+              height: 100%;
+              border-right: 1px solid #c2c2c2;
+              color: #525252;
+              &:hover {
+                background-color: #dadada;
+              }
             }
-          }
-          .search-part {
-            height: 95%;
-            padding: 0.25rem 0.5rem;
-          }
-          select {
-            position: absolute;
-            transform: translateY(2rem);
-            display: none;
-            &.active {
-              display: block;
+            .search-part {
+              height: 95%;
+              width: 100%;
             }
-          }
-          .btn-submit {
-            background-color: $submit-btn-color;
-            &:hover {
-              background-color: $submit-btn-hover-color;
+            select {
+              border: none;
+              border-image: none;
+              position: absolute;
+              transform: translateY(2rem);
+              //display: none;
+              z-index: 44;
+              &.active {
+                display: block;
+              }
             }
-            padding: 0.5rem 0.75rem;
+            .btn-submit {
+              background-color: $submit-btn-color;
+              width: fit-content;
+              height: 100%;
+              &:hover {
+                background-color: $submit-btn-hover-color;
+              }
+              padding: 0.5rem 0.75rem;
+            }
           }
         }
-
         .nav-right {
           #cart-picture {
             height: 3rem;
@@ -216,6 +242,7 @@ body {
       }
       #product-details {
         margin: 0 1rem;
+        max-width: 35%;
         #product-main-text {
           line-height: 2rem;
           font-size: 1.5rem;
@@ -231,6 +258,7 @@ body {
                 cursor: pointer;
                 border: 1px solid rgb(172, 172, 172);
                 margin-right: 0.5rem;
+                position: relative;
                 &.selected {
                   box-shadow: 0 0 2px 1px $small-picture-hover-border-color;
                   border-color: $small-picture-hover-border-color;
@@ -246,6 +274,7 @@ body {
               &:hover {
                 background-color: #e3e6e6;
                 box-shadow: 0 0 2px 2px #92c1ff;
+                cursor: pointer;
                 option {
                   background-color: #fff;
                 }

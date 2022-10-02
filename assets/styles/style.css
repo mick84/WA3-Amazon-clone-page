@@ -250,6 +250,10 @@ a {
   color: black;
 }
 
+sup {
+  vertical-align: sub;
+}
+
 @font-face {
   font-family: "ember-regular";
   src: url(/assets/fonts/AmazonEmber_Rg.ttf) format("truetype");
@@ -271,8 +275,20 @@ a {
   margin: 1rem 0;
 }
 
+.card {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #a7a7a7;
+}
+
 .secondary-link {
   color: #007185;
+}
+.secondary-link:hover {
+  text-decoration: underline;
+  color: #d7771f;
+  cursor: pointer;
 }
 
 .price {
@@ -304,6 +320,9 @@ a {
 
 .nav-btn-link {
   height: 95%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   padding: 0.5rem 0.5rem;
   color: white;
 }
@@ -321,7 +340,6 @@ body #navbar-main {
   flex-direction: column;
 }
 body #navbar-main #navbar {
-  font-size: 14px;
   line-height: 15px;
   flex-direction: column;
   width: 100%;
@@ -365,40 +383,60 @@ body #navbar-main #navbar #nav-top .nav-top-left #nav-location {
 body #navbar-main #navbar #nav-top .nav-top-left #nav-location #location--pin {
   background-image: url(/assets/images/amazon-nav-logo.png);
 }
-body #navbar-main #navbar #nav-top #searchbar {
+body #navbar-main #navbar #nav-top .nav-top-center {
+  width: 100%;
+}
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar {
   position: relative;
   border: 1px solid white;
+  overflow: hidden;
+  border-radius: 5px;
+  width: auto;
+  margin: 0 1rem;
+  height: 2.5rem;
 }
-body #navbar-main #navbar #nav-top #searchbar #searchinput {
-  padding: 0.5rem;
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar #searchinput {
+  line-height: 1.2rem;
+  font-size: 1.2rem;
 }
-body #navbar-main #navbar #nav-top #searchbar #searchinput:active {
-  display: block;
-}
-body #navbar-main #navbar #nav-top #searchbar #select-toggler {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar #select-toggler {
   background-color: white;
   padding: 0.6rem;
+  min-width: 3.5rem;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  height: 100%;
+  border-right: 1px solid #c2c2c2;
+  color: #525252;
 }
-body #navbar-main #navbar #nav-top #searchbar #select-toggler:hover {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar #select-toggler:hover {
   background-color: #dadada;
 }
-body #navbar-main #navbar #nav-top #searchbar .search-part {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar .search-part {
   height: 95%;
-  padding: 0.25rem 0.5rem;
+  width: 100%;
 }
-body #navbar-main #navbar #nav-top #searchbar select {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar select {
+  border: none;
+  -o-border-image: none;
+     border-image: none;
   position: absolute;
   transform: translateY(2rem);
-  display: none;
+  z-index: 44;
 }
-body #navbar-main #navbar #nav-top #searchbar select.active {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar select.active {
   display: block;
 }
-body #navbar-main #navbar #nav-top #searchbar .btn-submit {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar .btn-submit {
   background-color: #ffd814;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
   padding: 0.5rem 0.75rem;
 }
-body #navbar-main #navbar #nav-top #searchbar .btn-submit:hover {
+body #navbar-main #navbar #nav-top .nav-top-center #searchbar .btn-submit:hover {
   background-color: #f7ca00;
 }
 body #navbar-main #navbar #nav-top .nav-right #cart-picture {
@@ -475,6 +513,7 @@ body main #product #big-pictures-container .big-picture > img:not(.selected) {
 }
 body main #product #product-details {
   margin: 0 1rem;
+  max-width: 35%;
 }
 body main #product #product-details #product-main-text {
   line-height: 2rem;
@@ -488,6 +527,7 @@ body main #product #product-details #product-options #color-section #color-selec
   cursor: pointer;
   border: 1px solid rgb(172, 172, 172);
   margin-right: 0.5rem;
+  position: relative;
 }
 body main #product #product-details #product-options #color-section #color-selector .imgSwatch.selected {
   box-shadow: 0 0 2px 1px #e77600;
@@ -501,7 +541,40 @@ body main #product #product-details #product-options #size-section select {
 body main #product #product-details #product-options #size-section select:hover {
   background-color: #e3e6e6;
   box-shadow: 0 0 2px 2px #92c1ff;
+  cursor: pointer;
 }
 body main #product #product-details #product-options #size-section select:hover option {
   background-color: #fff;
+}
+body main #product #product-details #product-options #additional-info .property:nth-of-type(n + 1) {
+  margin-bottom: 0.5rem;
+}
+body main #product #product-details #product-options #additional-info #description {
+  display: none;
+}
+body main #product #buyer-area {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+body main #product #buyer-area .actual-price {
+  font-size: 1.5rem;
+}
+body main #product #buyer-area .buyer-area--btn {
+  width: 95%;
+  margin: 0.5rem auto;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+}
+body main #product #buyer-area .buyer-area--btn#btn-add {
+  background-color: #ffd814;
+}
+body main #product #buyer-area .buyer-area--btn#btn-add:hover {
+  background-color: #f7ca00;
+}
+body main #product #buyer-area .buyer-area--btn#btn-buy {
+  background-color: #ffa41c;
+}
+body main #product #buyer-area .buyer-area--btn#btn-buy:hover {
+  background-color: #e77600;
 }/*# sourceMappingURL=style.css.map */
