@@ -46,7 +46,7 @@ $test-border: 2px solid red;
   padding: 0.5rem 0.5rem;
   color: white;
 }
-.dynamic-content::after {
+[data-content]::after {
   content: " " attr(data-content) " ";
 }
 body {
@@ -81,7 +81,6 @@ body {
             font-size: 0.9rem;
           }
         }
-
         .nav-top-item:last-of-type {
           display: flex;
           height: 100%;
@@ -95,12 +94,9 @@ body {
           }
           #nav-location {
             align-items: center;
-            height: 100%;
-            width: max-content;
+
             #location--pin {
               background-image: url(/assets/images/amazon-nav-logo.png);
-              //background-position-y: 573px;
-              //background-position-x: -60px;
             }
           }
         }
@@ -157,12 +153,16 @@ body {
             }
           }
         }
-        .nav-right {
-          #cart-picture {
-            height: 3rem;
-            width: 3rem;
-            background-image: url(//assets/images/amazon-nav-logo.png);
-            background-color: #cccccc;
+        .nav-top-right {
+          .nav-btn-link:last-of-type {
+            #cart-picture {
+              height: 1.9rem;
+              width: 3rem;
+              background-color: #cccccc;
+              background-image: url(/assets/images/amazon-nav-logo.png);
+              background-position: -0.3rem 7.1rem;
+              background-color: transparent;
+            }
           }
         }
       }
@@ -170,6 +170,15 @@ body {
         max-height: 39px;
         padding: 0.25rem 1rem;
         background-color: #232f3e;
+        .nav-btn-link {
+          //position: relative;
+          #side-menu-toggler {
+            height: 3rem;
+            width: 5rem;
+
+            background-image: url(/assets/images/amazon-nav-logo.png);
+          }
+        }
       }
       #nav-bottom {
         background-color: #d8f7eb;
@@ -207,12 +216,15 @@ body {
         width: min-content;
         translate: -50% 2rem;
 
-        .small-picture > img {
-          &.selected {
-            display: block;
-          }
-          &:not(.selected) {
-            display: none;
+        .small-picture {
+          margin-bottom: 0.75rem;
+          img {
+            &.selected {
+              display: block;
+            }
+            &:not(.selected) {
+              display: none;
+            }
           }
         }
       }

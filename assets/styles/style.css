@@ -327,7 +327,7 @@ sup {
   color: white;
 }
 
-.dynamic-content::after {
+[data-content]::after {
   content: " " attr(data-content) " ";
 }
 
@@ -375,10 +375,6 @@ body #navbar-main #navbar #nav-top .nav-top-left #nav-logo {
 }
 body #navbar-main #navbar #nav-top .nav-top-left #nav-location {
   align-items: center;
-  height: 100%;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 body #navbar-main #navbar #nav-top .nav-top-left #nav-location #location--pin {
   background-image: url(/assets/images/amazon-nav-logo.png);
@@ -439,16 +435,23 @@ body #navbar-main #navbar #nav-top .nav-top-center #searchbar .btn-submit {
 body #navbar-main #navbar #nav-top .nav-top-center #searchbar .btn-submit:hover {
   background-color: #f7ca00;
 }
-body #navbar-main #navbar #nav-top .nav-right #cart-picture {
-  height: 3rem;
+body #navbar-main #navbar #nav-top .nav-top-right .nav-btn-link:last-of-type #cart-picture {
+  height: 1.9rem;
   width: 3rem;
-  background-image: url(//assets/images/amazon-nav-logo.png);
   background-color: #cccccc;
+  background-image: url(/assets/images/amazon-nav-logo.png);
+  background-position: -0.3rem 7.1rem;
+  background-color: transparent;
 }
 body #navbar-main #navbar #nav-middle {
   max-height: 39px;
   padding: 0.25rem 1rem;
   background-color: #232f3e;
+}
+body #navbar-main #navbar #nav-middle .nav-btn-link #side-menu-toggler {
+  height: 3rem;
+  width: 5rem;
+  background-image: url(/assets/images/amazon-nav-logo.png);
 }
 body #navbar-main #navbar #nav-bottom {
   background-color: #d8f7eb;
@@ -485,10 +488,13 @@ body main #product #small-pictures-container {
   width: min-content;
   translate: -50% 2rem;
 }
-body main #product #small-pictures-container .small-picture > img.selected {
+body main #product #small-pictures-container .small-picture {
+  margin-bottom: 0.75rem;
+}
+body main #product #small-pictures-container .small-picture img.selected {
   display: block;
 }
-body main #product #small-pictures-container .small-picture > img:not(.selected) {
+body main #product #small-pictures-container .small-picture img:not(.selected) {
   display: none;
 }
 body main #product #big-pictures-container {
